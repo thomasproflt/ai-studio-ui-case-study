@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export function Navbar() {
   return (
-    <div className="flex flex-row justify-between px-15 py-4 bg-white dark:text- dark:bg-[hsl(0,0%,10%)] text-black dark:text-zinc-50">
+    <div className="flex absolute flex-row justify-between min-w-full px-15 py-4 bg-white dark:text- dark:bg-[hsla(0,0%,10%,0)] text-black dark:text-zinc-50 z-50">
       <Image
-        className="dark:invert"
+        className="dark:invert select-none pointer-events-none"
         src="/aistudio.svg"
         alt="Logo"
         width={29}

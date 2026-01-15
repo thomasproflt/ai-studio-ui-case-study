@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "./components/navbar";
+import Footer from "./components/footer";
+import { HeroVideo } from "./components/HeroVideo";
 import ImgPlan1 from "@/public/shor-linkk.png";
 import ImgPlan2 from "@/public/shor-linkk.png";
 import ImgPlan3 from "@/public/shor-linkk.png";
@@ -11,7 +13,7 @@ import ImgModels3 from "@/public/offset_videocam_icon_outline.png";
 import ImgModels4 from "@/public/offset_audio_magic_eraser_icon_outline.png";
 import ImgModels5 from "@/public/offset_mic_detect_audio_icon_outline.png";
 import ImgModels6 from "@/public/offset_spark_icon_outline.png";
-import Footer from "./components/footer";
+import myVideo from "@/public/welcome_hero_2.mp4";
 
 export default function Home() {
   const planIncludes = [
@@ -108,17 +110,17 @@ export default function Home() {
   return (
     <div className="min-h-screen items-center justify-start bg-zinc-50 font-sans dark:bg-[hsl(0,0%,10%)]">
       <Navbar />
-
+        <HeroVideo src="/welcome_hero_2.mp4" />
       <main className="flex min-h-screen w-full max-w-full flex-col items-center justify-between py-32 px-30 bg-white dark:bg-[hsl(0,0%,10%)] sm:items-center">
         <div className="flex flex-col items-center gap-6 text-center">
-        <Image
-          className="dark:invert"
-          src="/aistudio-text.svg"
-          alt="AI"
-          width={255}
-          height={10}
-          priority
-        />
+          <Image
+            className="dark:invert select-none pointer-events-none"
+            src="/aistudio-text.svg"
+            alt="AI"
+            width={400}
+            height={10}
+            priority
+          />
           <p className="max-w-full text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             The fastest path from prompt to production with Gemini
           </p>
@@ -136,7 +138,7 @@ export default function Home() {
         </div>
       </main>
 
-      <section className="flex min-h-screen w-full max-w-full flex-row items-center justify-between py-32 px-30 bg-white dark:bg-[hsl(0,0%,10%)] sm:items-start">
+      <section className="flex container mx-auto min-h-screen w-full max-w-6xl flex-row items-center justify-between py-32 px-0 bg-white dark:bg-[hsl(0,0%,10%)] sm:items-start border-t dark:border-[hsla(0,0%,100%,0.1)]">
         <div className="flex flex-col space-y-100">
           {contentHome.map((item, index) => (
             <div key={item.id} className="">
@@ -165,7 +167,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col min-h-screen w-full max-w-full items-center justify-between py-32 px-30 bg-white dark:bg-[hsl(0,0%,10%)] sm:items-start">
+      <section className="flex flex-col container mx-auto min-h-screen w-full max-w-6xl items-center justify-between py-32 px-0 bg-white dark:bg-[hsl(0,0%,10%)] sm:items-start border-t dark:border-[hsla(0,0%,100%,0.1)]">
         <h1 className="max-w-xs text-3xl font-light leading-10 tracking-tight text-black dark:text-zinc-300 mb-10">
           Explore our Models
         </h1>
@@ -198,15 +200,20 @@ export default function Home() {
         </div>
       </section>
       <section className="flex flex-col container mx-auto min-h-screen w-full max-w-6xl items-center justify-center py-32 px-30 bg-white dark:bg-[hsl(0,0%,10%)] border-t dark:border-[hsla(0,0%,100%,0.1)]">
-        <h1 className="text-center max-w-xs text-3xl font-light leading-10 tracking-tight text-black dark:text-zinc-300 mb-10">
-          FlyShor
-        </h1>
-        <p className="text-center max-w-full text-3xl font-light leading-10 tracking-tight text-black dark:text-zinc-300 mb-10">
+        <Image
+          className="dark:invert opacity-50 select-none pointer-events-none mb-5"
+          src="/aistudio-text.svg"
+          alt="AI"
+          width={400}
+          height={10}
+          priority
+        />
+        <p className="text-center max-w-full text-2xl font-extralight leading-10 tracking-tight text-black dark:text-zinc-300 mb-10">
           Start exploring and building with Google’s latest AI models
         </p>
         <Link
-          className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[0.08] px-5 transition-colors hover:border-transparent hover:bg-black/[0.04] dark:border-white/[0.145] dark:hover:bg-[hsl(0,0%,13%)] md:w-[260px]"
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          className="flex h-12 w-full items-center justify-center rounded-2xl border border-solid border-black/[0.08] px-5 transition-colors hover:bg-black/[0.04] dark:border-white/[0.145] dark:hover:bg-[hsl(0,0%,13%)] md:w-[260px]"
+          href="/#"
           target="_blank"
           rel="noopener noreferrer"
         >
